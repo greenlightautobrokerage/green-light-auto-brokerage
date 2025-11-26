@@ -38,8 +38,6 @@
       display: block;
     }
 
-    /* Layout helpers */
-
     .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -301,6 +299,35 @@
       font-weight: 700;
     }
 
+    /* Brands strip */
+
+    .brands-section {
+      padding-top: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .brands-label {
+      font-size: 0.85rem;
+      opacity: 0.85;
+      margin-bottom: 0.4rem;
+    }
+
+    .brands-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .brand-pill {
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(11, 79, 59, 0.3);
+      font-size: 0.8rem;
+      color: var(--green);
+      background: rgba(255, 255, 255, 0.9);
+      white-space: nowrap;
+    }
+
     /* Sections */
 
     section {
@@ -414,6 +441,37 @@
       font-weight: 600;
     }
 
+    .social-links {
+      margin-top: 1.1rem;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .social-links span {
+      opacity: 0.9;
+    }
+
+    .social-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--green);
+      background: #ffffff;
+    }
+
+    .social-icon:hover {
+      background: #f5ecd8;
+    }
+
     form {
       background: rgba(255, 255, 255, 0.96);
       border-radius: 18px;
@@ -458,6 +516,13 @@
       margin-top: 0.1rem;
     }
 
+    #form-message {
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+      display: none;
+      color: var(--green);
+    }
+
     footer {
       border-top: 1px solid rgba(0, 0, 0, 0.08);
       padding: 1.3rem 1.25rem 1.8rem;
@@ -470,8 +535,6 @@
       text-decoration: underline;
       text-decoration-style: dotted;
     }
-
-    /* Responsive */
 
     @media (max-width: 860px) {
       .hero {
@@ -519,7 +582,7 @@
         <a href="#contact" class="btn-nav">Best Deals</a>
       </div>
     </div>
-    </header>
+  </header>
 
   <!-- Hero -->
   <main>
@@ -538,13 +601,14 @@
           <li><span class="tick">✓</span> No sales pressure</li>
           <li><span class="tick">✓</span> No lowball offers</li>
           <li><span class="tick">✓</span> No bait-and-switch</li>
+          <li><span class="tick">✓</span> Access to invoice &amp; below-invoice deals (when available)</li>
         </ul>
 
         <div class="hero-actions">
-          <a href="#contact" class="btn-primary">Get a quote</a>
+          <a href="#contact" class="btn-primary">Get my best deal</a>
           <a href="#services" class="btn-ghost">See how it works</a>
         </div>
-        <p class="hero-note">Lease · Buy · Sell · New & pre-owned vehicles.</p>
+        <p class="hero-note">Lease · Buy · Sell · New &amp; pre-owned vehicles.</p>
       </div>
 
       <aside class="hero-visual">
@@ -568,6 +632,27 @@
       </aside>
     </section>
 
+    <!-- Brands strip -->
+    <section class="brands-section">
+      <div class="container">
+        <p class="brands-label">Brands we commonly work with:</p>
+        <div class="brands-row">
+          <span class="brand-pill">Mercedes-Benz</span>
+          <span class="brand-pill">BMW</span>
+          <span class="brand-pill">Audi</span>
+          <span class="brand-pill">Cadillac</span>
+          <span class="brand-pill">Lexus</span>
+          <span class="brand-pill">Toyota</span>
+          <span class="brand-pill">Honda</span>
+          <span class="brand-pill">Hyundai</span>
+          <span class="brand-pill">Kia</span>
+          <span class="brand-pill">Chevrolet</span>
+          <span class="brand-pill">Nissan</span>
+        </div>
+        <!-- Later, if you upload logo images, you can replace these names with <img src="logos/mercedes.png" alt="Mercedes-Benz"> etc. -->
+      </div>
+    </section>
+
     <!-- Services -->
     <section id="services">
       <div class="container">
@@ -579,7 +664,7 @@
         </p>
 
         <div class="pill-row">
-          <span class="pill">New & pre-owned vehicles</span>
+          <span class="pill">New &amp; pre-owned vehicles</span>
           <span class="pill">Lease · Buy · Finance</span>
           <span class="pill">Trade-in assistance</span>
           <span class="pill">Delivery coordination</span>
@@ -596,7 +681,7 @@
             </p>
           </div>
           <div class="card">
-            <h3>Negotiation & pricing</h3>
+            <h3>Negotiation &amp; pricing</h3>
             <p>
               We work with our dealer network to secure transparent, competitive
               pricing without markups or surprise add-ons. No more back-and-forth
@@ -638,14 +723,13 @@
             <div class="step-number">2</div>
             <h3>We shop the market</h3>
             <p>
-              We contact multiple dealerships, compare options, and negotiate deals
-              behind the scenes. You’ll see the best options without any pressure
-              or upsell tactics.
+              We contact multiple dealerships, pull invoice or below-invoice
+              opportunities when available, and compare options for you.
             </p>
           </div>
           <div class="card">
             <div class="step-number">3</div>
-            <h3>Choose, sign & drive</h3>
+            <h3>You choose, sign &amp; drive</h3>
             <p>
               Pick the deal that works best for you. We assist with paperwork and
               logistics so you can get your new vehicle with minimal hassle.
@@ -665,26 +749,27 @@
             a custom quote with no obligation and no pressure.
           </p>
 
-          <!-- TODO: Replace these with your real details -->
+          <!-- UPDATE THESE TO YOUR REAL INFO -->
           <div class="contact-details">
-            <strong>Call / Text:</strong> (714) 471-8775
+            <strong>Call / Text:</strong> (555) 555-5555
           </div>
           <div class="contact-details">
             <strong>Email:</strong> info@greenlightautobrokerage.com
           </div>
           <div class="contact-details">
-            <strong>Serving:</strong> Southern California
+            <strong>Serving:</strong> Orange County, CA &amp; surrounding areas
           </div>
-          <div class="contact-details">
-            <strong>Hours:</strong> By appointment
+
+          <div class="social-links">
+            <span>Follow us:</span>
+            <!-- Replace href values with your real profiles -->
+            <a href="https://instagram.com/greenlightautobrokerage" target="_blank" rel="noopener noreferrer" class="social-icon">IG</a>
+            <a href="https://facebook.com/greenlightautobrokerage" target="_blank" rel="noopener noreferrer" class="social-icon">f</a>
           </div>
         </div>
 
-        <form
-          action="mailto:info@greenlightautobrokerage.com"
-          method="post"
-          enctype="text/plain"
-        >
+        <!-- Form no longer submits anywhere; just shows a message -->
+        <form id="lead-form">
           <h2 style="font-size:1.1rem; margin-bottom:0.6rem;">
             Request your best deal
           </h2>
@@ -703,7 +788,6 @@
             <option>Lease a vehicle</option>
             <option>Buy a vehicle</option>
             <option>Sell / trade-in</option>
-            <option>Just exploring options</option>
           </select>
 
           <label for="details">Vehicle details</label>
@@ -714,12 +798,16 @@
           ></textarea>
 
           <div class="form-small">
-            This form will open your email app and send us your request.
+            For now, this form does not send automatically. After you fill it out, use the message below to text or email us your info.
           </div>
 
           <button class="btn-primary btn-full" type="submit">
             Get my best deal
           </button>
+
+          <div id="form-message">
+            Thanks! Please text or email me using the contact info above with these details so I can work on your best deal.
+          </div>
         </form>
       </div>
     </section>
@@ -731,6 +819,21 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple front-end handling of the form (no real submission yet)
+    const leadForm = document.getElementById("lead-form");
+    const formMessage = document.getElementById("form-message");
+
+    if (leadForm) {
+      leadForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // stop any real submission
+        if (formMessage) {
+          formMessage.style.display = "block";
+        }
+        // Optionally scroll into view
+        formMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    }
   </script>
 </body>
 </html>
