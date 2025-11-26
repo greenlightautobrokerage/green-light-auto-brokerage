@@ -290,7 +290,7 @@
       font-weight: 700;
     }
 
-    /* Brands strip */
+    /* Brands */
 
     .brands-section {
       padding-top: 1.3rem;
@@ -300,4 +300,481 @@
     .brands-label {
       font-size: 0.85rem;
       opacity: 0.85;
-      margin-bottom: 0.
+      margin-bottom: 0.4rem;
+    }
+
+    .brands-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .brand-pill {
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(11, 79, 59, 0.3);
+      font-size: 0.8rem;
+      color: var(--green);
+      background: rgba(255, 255, 255, 0.9);
+      white-space: nowrap;
+    }
+
+    /* Simple sections */
+
+    .section-heading {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      max-width: 34rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.3rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      padding: 1.1rem 1.05rem 1.2rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+      font-size: 0.9rem;
+    }
+
+    .card h3 {
+      font-size: 1.02rem;
+      margin-bottom: 0.3rem;
+      color: var(--green);
+    }
+
+    .card p {
+      font-size: 0.86rem;
+      opacity: 0.92;
+    }
+
+    .card ul {
+      margin-left: 1.1rem;
+      margin-top: 0.3rem;
+      font-size: 0.84rem;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--light);
+      font-size: 0.78rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* Contact */
+
+    .contact {
+      margin-top: 2.5rem;
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .contact-card {
+      background: var(--green);
+      color: var(--light);
+      border-radius: 24px;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .contact-card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-card p {
+      font-size: 0.9rem;
+      opacity: 0.95;
+      margin-bottom: 0.8rem;
+    }
+
+    .contact-details {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-details strong {
+      font-weight: 600;
+    }
+
+    .social-links {
+      margin-top: 0.9rem;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .social-links span {
+      opacity: 0.9;
+    }
+
+    .social-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--green);
+      background: #ffffff;
+    }
+
+    .social-icon:hover {
+      background: #f5ecd8;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 18px;
+      padding: 1.2rem 1.1rem 1.3rem;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.16);
+      padding: 0.55rem 0.65rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.7rem;
+      font-family: inherit;
+      background: #fffdf7;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .form-small {
+      font-size: 0.72rem;
+      opacity: 0.7;
+      margin-top: 0.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .btn-full {
+      width: 100%;
+      margin-top: 0.1rem;
+    }
+
+    #form-message {
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+      display: none;
+      color: var(--green);
+    }
+
+    footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      padding: 1.3rem 1.25rem 1.8rem;
+      font-size: 0.8rem;
+      color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 2.3rem;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .contact {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .nav-links,
+      .btn-nav {
+        display: none;
+      }
+
+      .nav {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="logo-wrap">
+          <div class="logo-icon">GL</div>
+          <div class="logo-text">GREEN LIGHT AUTO BROKERAGE</div>
+        </div>
+        <nav class="nav-links">
+          <a href="#why">Why us</a>
+          <a href="#process">How it works</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="btn-nav">Best Deals</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="container hero" id="top">
+      <div>
+        <div class="hero-kicker">Southern California · Auto Broker</div>
+        <h1>Skip the dealership headaches.</h1>
+        <p class="hero-tagline">
+          Lease, buy, or sell your next vehicle with no hidden fees, no haggling, and access to invoice &amp; below-invoice deals when available.
+        </p>
+
+        <ul class="hero-bullets">
+          <li><span class="tick">✓</span> No hidden fees</li>
+          <li><span class="tick">✓</span> No haggling or games</li>
+          <li><span class="tick">✓</span> No sales pressure</li>
+          <li><span class="tick">✓</span> No bait-and-switch</li>
+          <li><span class="tick">✓</span> Access to invoice &amp; below-invoice deals (when available)</li>
+        </ul>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Get my best deal</a>
+          <a href="#why" class="btn-ghost">Why this works better</a>
+        </div>
+        <p class="hero-note">Short on time? One conversation can save you hours at the dealership.</p>
+      </div>
+
+      <aside class="hero-visual">
+        <div class="car-outline"></div>
+        <h2>Built for busy people who still want a great deal.</h2>
+        <p>
+          You tell us what you want and your budget. We shop multiple dealerships, negotiate on your behalf, and bring back the cleanest options.
+        </p>
+        <div class="hero-strip">
+          <span><strong>Green Light Auto Brokerage</strong> · Southern California</span>
+          <span>Transparent quotes · Customer-first approach</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Brands -->
+    <section class="brands-section">
+      <div class="container">
+        <p class="brands-label">Brands we commonly work with:</p>
+        <div class="brands-row">
+          <span class="brand-pill">Mercedes-Benz</span>
+          <span class="brand-pill">BMW</span>
+          <span class="brand-pill">Audi</span>
+          <span class="brand-pill">Cadillac</span>
+          <span class="brand-pill">Lexus</span>
+          <span class="brand-pill">Toyota</span>
+          <span class="brand-pill">Honda</span>
+          <span class="brand-pill">Hyundai</span>
+          <span class="brand-pill">Kia</span>
+          <span class="brand-pill">Chevrolet</span>
+          <span class="brand-pill">Nissan</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why us -->
+    <section id="why">
+      <div class="container">
+        <h2 class="section-heading">Why people use an auto broker instead of going in alone</h2>
+        <p class="section-sub">
+          Most people only buy or lease a car every few years. Dealers do it every day. We even the playing field so you don’t have to be an expert.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Dealership experience</h3>
+            <ul>
+              <li>3–5 hours in the showroom</li>
+              <li>Back-and-forth numbers and “let me ask my manager”</li>
+              <li>Last-minute add-ons and extras</li>
+              <li>Hard to know if you actually got a good deal</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Green Light experience</h3>
+            <ul>
+              <li>Quick conversation about what you want</li>
+              <li>We shop and compare for you</li>
+              <li>Clean, simple options you can say yes or no to</li>
+              <li>No pressure if it doesn’t feel right</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="process">
+      <div class="container">
+        <h2 class="section-heading">How it works (simple)</h2>
+        <p class="section-sub">
+          A clear path from “I need a car” to “keys in hand” without losing your whole day.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="step-number">1</div>
+            <h3>Tell us what you need</h3>
+            <p>
+              New or pre-owned, payment comfort zone, brands you like, and your timing. We can help you narrow it down if you’re not sure.
+            </p>
+          </div>
+          <div class="card">
+            <div class="step-number">2</div>
+            <h3>We shop &amp; negotiate</h3>
+            <p>
+              We contact multiple dealerships, look for invoice or below-invoice opportunities, and filter out the bad offers.
+            </p>
+          </div>
+          <div class="card">
+            <div class="step-number">3</div>
+            <h3>You choose &amp; drive</h3>
+            <p>
+              You review the best options, pick what feels right, and we help coordinate the paperwork and pickup or delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container contact">
+        <div class="contact-card">
+          <h2>Ready to see your best deal?</h2>
+          <p>
+            Share a few details about what you’re looking for. We’ll review and follow up with next steps&mdash;no pressure, no obligation.
+          </p>
+
+          <div class="contact-details">
+            <strong>Call / Text:</strong> +1 (714) 471-8775
+          </div>
+          <div class="contact-details">
+            <strong>Email:</strong> info@greenlightautobrokerage.com
+          </div>
+          <div class="contact-details">
+            <strong>Serving:</strong> Southern California
+          </div>
+
+          <div class="social-links">
+            <span>Follow us:</span>
+            <a href="https://www.instagram.com/greenlightautobroker/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon">IG</a>
+            <a href="https://www.facebook.com/profile.php?id=61584242339990" target="_blank" rel="noopener noreferrer" class="social-icon">f</a>
+          </div>
+        </div>
+
+        <form id="lead-form">
+          <h2 style="font-size:1.1rem; margin-bottom:0.6rem;">
+            Request your best deal
+          </h2>
+
+          <label for="name">Name</label>
+          <input id="name" name="Name" required />
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="Phone" />
+
+          <label for="email">Email</label>
+          <input id="email" name="Email" type="email" required />
+
+          <label for="service">What are you looking to do?</label>
+          <select id="service" name="Service">
+            <option>Lease a vehicle</option>
+            <option>Buy a vehicle</option>
+            <option>Sell / trade-in</option>
+          </select>
+
+          <label for="details">Vehicle details</label>
+          <textarea
+            id="details"
+            name="Vehicle details"
+            placeholder="Year, make, model, budget, must-have features..."
+          ></textarea>
+
+          <div class="form-small">
+            For now, this form doesn’t send automatically. After you fill it out, use the message below as a guide when you text or email us.
+          </div>
+
+          <button class="btn-primary btn-full" type="submit">
+            Get my best deal
+          </button>
+
+          <div id="form-message">
+            Thanks! Please text or email us using the contact info above with these details so we can start working on your best deal.
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Green Light Auto Brokerage. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const leadForm = document.getElementById("lead-form");
+    const formMessage = document.getElementById("form-message");
+
+    if (leadForm) {
+      leadForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (formMessage) {
+          formMessage.style.display = "block";
+        }
+        formMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    }
+  </script>
+</body>
+</html>
