@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
   <title>Green Light Auto Brokerage | Southern California Auto Broker</title>
-  <meta name="description" content="Green Light Auto Brokerage helps you lease, buy, or sell your next vehicle in Southern California with no hidden fees, no haggling, and access to invoice & below-invoice deals when available.">
+  <meta
+    name="description"
+    content="Green Light Auto Brokerage helps you lease, buy, or sell your next vehicle in Southern California with no hidden fees, no haggling, and access to invoice & below-invoice deals when available."
+  />
   <style>
     :root {
       --green: #0b4f3b;
@@ -21,7 +27,8 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
       background: var(--beige);
       color: var(--dark);
       line-height: 1.6;
@@ -319,7 +326,7 @@
       white-space: nowrap;
     }
 
-    /* Simple sections */
+    /* Sections */
 
     .section-heading {
       font-size: 1.6rem;
@@ -506,6 +513,29 @@
       color: var(--green);
     }
 
+    /* Floating CTA */
+
+    .floating-cta {
+      position: fixed;
+      right: 1.2rem;
+      bottom: 1.2rem;
+      z-index: 60;
+      display: none;
+    }
+
+    .floating-cta a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.2rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--green), var(--green-soft));
+      color: var(--light);
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: 0 12px 26px rgba(11, 79, 59, 0.4);
+    }
+
     footer {
       border-top: 1px solid rgba(0, 0, 0, 0.08);
       padding: 1.3rem 1.25rem 1.8rem;
@@ -540,6 +570,10 @@
 
       .nav {
         justify-content: center;
+      }
+
+      .floating-cta {
+        display: block;
       }
     }
   </style>
@@ -621,7 +655,38 @@
       </div>
     </section>
 
-    <!-- Why us -->
+    <!-- What we help with -->
+    <section>
+      <div class="container">
+        <h2 class="section-heading">What we help with</h2>
+        <p class="section-sub">
+          Whether you’re leasing, buying, or selling, we help you get through the process with less stress and more clarity.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Lease a vehicle</h3>
+            <p>
+              Find the right lease, understand the terms, and avoid paying more than you should over the life of the lease.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Buy a vehicle</h3>
+            <p>
+              New or pre-owned, we help you compare options and pricing so you can feel confident signing the paperwork.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Sell or trade-in</h3>
+            <p>
+              Get clarity on your current vehicle’s value and how it fits into your next move so you don’t leave money on the table.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why us: dealership vs broker -->
     <section id="why">
       <div class="container">
         <h2 class="section-heading">Why people use an auto broker instead of going in alone</h2>
@@ -631,7 +696,7 @@
 
         <div class="grid-2">
           <div class="card">
-            <h3>Dealership experience</h3>
+            <h3>Typical dealership experience</h3>
             <ul>
               <li>3–5 hours in the showroom</li>
               <li>Back-and-forth numbers and “let me ask my manager”</li>
@@ -652,7 +717,69 @@
       </div>
     </section>
 
-    <!-- How it works -->
+    <!-- What makes us different -->
+    <section>
+      <div class="container">
+        <h2 class="section-heading">What makes us different</h2>
+        <p class="section-sub">
+          The goal is simple: give you a smoother, more transparent way to get into your next vehicle.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Time savings</h3>
+            <p>
+              Skip the long days at the dealership. We handle calls, searching, and comparing so you don’t have to.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Transparency</h3>
+            <p>
+              Straightforward numbers and real explanations. No forced extras, no hidden fees, no last-minute surprises.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Personal service</h3>
+            <p>
+              One point of contact that understands what you want and helps you navigate every step without pressure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Example deals -->
+    <section>
+      <div class="container">
+        <h2 class="section-heading">Example deal scenarios</h2>
+        <p class="section-sub">
+          Every situation is different, but here are the kinds of results people are often looking for when they work with a broker.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Luxury lease shopper</h3>
+            <p>
+              Looking for a payment that fits your budget on brands like Mercedes-Benz, BMW, Audi, or Lexus without spending all day at different dealers.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Family upgrade</h3>
+            <p>
+              Moving into a larger SUV or minivan from Toyota, Honda, Kia, or Hyundai and wanting to understand the real numbers, not just the monthly payment.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Trade-in &amp; buy</h3>
+            <p>
+              Trading out of your current vehicle into something newer while making sure you’re not giving away your trade-in value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
     <section id="process">
       <div class="container">
         <h2 class="section-heading">How it works (simple)</h2>
@@ -672,7 +799,7 @@
             <div class="step-number">2</div>
             <h3>We shop &amp; negotiate</h3>
             <p>
-              We contact multiple dealerships, look for invoice or below-invoice opportunities, and filter out the bad offers.
+              We contact multiple dealerships, look for invoice or below-invoice opportunities when available, and filter out the bad offers.
             </p>
           </div>
           <div class="card">
@@ -707,8 +834,20 @@
 
           <div class="social-links">
             <span>Follow us:</span>
-            <a href="https://www.instagram.com/greenlightautobroker/?hl=en" target="_blank" rel="noopener noreferrer" class="social-icon">IG</a>
-            <a href="https://www.facebook.com/profile.php?id=61584242339990" target="_blank" rel="noopener noreferrer" class="social-icon">f</a>
+            <a
+              href="https://www.instagram.com/greenlightautobroker/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon"
+              >IG</a
+            >
+            <a
+              href="https://www.facebook.com/profile.php?id=61584242339990"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-icon"
+              >f</a
+            >
           </div>
         </div>
 
@@ -759,6 +898,11 @@
   <footer>
     © <span id="year"></span> Green Light Auto Brokerage. All rights reserved.
   </footer>
+
+  <!-- Floating CTA (mobile) -->
+  <div class="floating-cta">
+    <a href="#contact">Get my best deal</a>
+  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
