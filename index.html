@@ -207,6 +207,7 @@
       font-size: 0.95rem;
       cursor: pointer;
       box-shadow: 0 10px 22px rgba(11, 79, 59, 0.35);
+      display: inline-block;
     }
 
     .btn-primary:hover {
@@ -223,6 +224,7 @@
       font-size: 0.9rem;
       cursor: pointer;
       color: var(--green);
+      display: inline-block;
     }
 
     .btn-ghost:hover {
@@ -545,11 +547,51 @@
       margin-top: 0.1rem;
     }
 
-    #form-message {
-      margin-top: 0.5rem;
-      font-size: 0.78rem;
+    #confirmationBox {
       display: none;
+      margin-top: 1rem;
+      padding: 1.2rem 1rem 1.1rem;
+      border-radius: 16px;
+      background: #f3eee1;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 0.9rem;
+    }
+
+    #confirmationBox h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
       color: var(--green);
+    }
+
+    #confirmationBox pre {
+      background: #fff;
+      padding: 0.6rem 0.7rem;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      font-size: 0.78rem;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      margin-bottom: 0.8rem;
+    }
+
+    .sms-button {
+      display: block;
+      margin-top: 0.3rem;
+      padding: 0.8rem 1.2rem;
+      text-align: center;
+      background: linear-gradient(135deg, var(--green), var(--green-soft));
+      color: #fff;
+      font-weight: 600;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      box-shadow: 0 10px 20px rgba(11, 79, 59, 0.35);
+    }
+
+    .sms-button:hover {
+      filter: brightness(0.97);
     }
 
     /* Floating CTA */
@@ -635,7 +677,7 @@
           <a href="#process">How it works</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a href="#contact" class="btn-nav">Best Deals</a>
+        <a href="sms:+17144718775?&body=Hi%2C%20I%27m%20interested%20in%20a%20vehicle%20deal." class="btn-nav">Text Us</a>
       </div>
     </div>
   </header>
@@ -660,10 +702,10 @@
         </ul>
 
         <div class="hero-actions">
-          <a href="#contact" class="btn-primary">Get my best deal</a>
-          <a href="#why" class="btn-ghost">See how we save you money</a>
+          <a href="sms:+17144718775?&body=Hi%2C%20I%27m%20interested%20in%20a%20vehicle%20deal." class="btn-primary">Text us now</a>
+          <a href="#contact" class="btn-ghost">Use quick form</a>
         </div>
-        <p class="hero-note">Lease · Buy · Sell · New &amp; pre-owned vehicles.</p>
+        <p class="hero-note">Lease · Buy · Sell · New &amp; pre-owned vehicles. Best way to reach us is by text.</p>
       </div>
 
       <aside class="hero-visual">
@@ -818,20 +860,17 @@
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact / SMS Form -->
     <section id="contact">
       <div class="container contact">
         <div class="contact-card">
-          <h2>Ready to see what a broker can save you?</h2>
+          <h2>Text us to see what a broker can save you.</h2>
           <p>
-            Share a few details about what you’re looking for. We’ll review and follow up with next steps—no pressure, no obligation.
+            The fastest way to reach us is by text. Share a few details and we’ll follow up with options—no pressure, no obligation.
           </p>
 
           <div class="contact-details">
             <strong>Call / Text:</strong> +1 (714) 471-8775
-          </div>
-          <div class="contact-details">
-            <strong>Email:</strong> info@greenlightautobrokerage.com
           </div>
           <div class="contact-details">
             <strong>Serving:</strong> Southern California
@@ -858,17 +897,22 @@
 
         <form id="lead-form">
           <h2 style="font-size:1.1rem; margin-bottom:0.6rem;">
-            Request your best deal
+            Quick form (then tap to text)
           </h2>
 
           <label for="name">Name</label>
           <input id="name" name="Name" required />
 
-          <label for="phone">Phone</label>
-          <input id="phone" name="Phone" />
+          <label for="phone">Your phone number</label>
+          <input id="phone" name="Phone" required />
 
-          <label for="email">Email</label>
-          <input id="email" name="Email" type="email" required />
+          <label for="vehicle">Vehicle you're looking for</label>
+          <input
+            id="vehicle"
+            name="Vehicle"
+            placeholder="Year, make, model"
+            required
+          />
 
           <label for="service">What are you looking to do?</label>
           <select id="service" name="Service">
@@ -877,23 +921,32 @@
             <option>Sell / trade-in</option>
           </select>
 
-          <label for="details">Vehicle details</label>
+          <label for="details">Anything else we should know?</label>
           <textarea
             id="details"
-            name="Vehicle details"
-            placeholder="Year, make, model, budget, must-have features..."
+            name="Details"
+            placeholder="Budget, must-have features, timing..."
           ></textarea>
 
           <div class="form-small">
-            For now, this form doesn’t send automatically. After you fill it out, use the message below as a guide when you text or email us.
+            After you submit, tap the button to send everything to us by text. No email needed.
           </div>
 
           <button class="btn-primary btn-full" type="submit">
             Get my best deal
           </button>
 
-          <div id="form-message">
-            Thanks! Please text or email us using the contact info above with these details so we can start working on your best deal.
+          <div id="confirmationBox">
+            <h3>You're almost done</h3>
+            <p>Here’s the info you’re about to text us:</p>
+            <pre id="previewText"></pre>
+            <a id="smsButton" class="sms-button" href="#">
+              Text this info to (714) 471-8775
+            </a>
+            <p class="form-small" style="margin-top:0.7rem;">
+              If the button doesn’t open your messages app, you can copy the text above and send it manually to
+              <strong>(714) 471-8775</strong>.
+            </p>
           </div>
         </form>
       </div>
@@ -906,22 +959,62 @@
 
   <!-- Floating CTA (mobile) -->
   <div class="floating-cta">
-    <a href="#contact">Get my best deal</a>
+    <a href="sms:+17144718775?&body=Hi%2C%20I%27m%20interested%20in%20a%20vehicle%20deal.">
+      Text Us for Best Deal
+    </a>
   </div>
 
   <script>
+    // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // SMS form logic
     const leadForm = document.getElementById("lead-form");
-    const formMessage = document.getElementById("form-message");
+    const confirmationBox = document.getElementById("confirmationBox");
+    const previewText = document.getElementById("previewText");
+    const smsButton = document.getElementById("smsButton");
 
     if (leadForm) {
       leadForm.addEventListener("submit", function (e) {
         e.preventDefault();
-        if (formMessage) {
-          formMessage.style.display = "block";
+
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const vehicle = document.getElementById("vehicle").value.trim();
+        const service = document.getElementById("service").value;
+        const details = document.getElementById("details").value.trim();
+
+        let preview =
+          "Name: " + (name || "(not provided)") + "\n" +
+          "Their phone: " + (phone || "(not provided)") + "\n" +
+          "Vehicle: " + (vehicle || "(not provided)") + "\n" +
+          "Looking to: " + service + "\n";
+
+        if (details) {
+          preview += "Details: " + details + "\n";
         }
-        formMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        previewText.textContent = preview;
+
+        // Build SMS body (URL-encoded line breaks)
+        let smsBody =
+          "Hi, I'm " + (name || "") +
+          "%0AHere is my info:" +
+          "%0APhone: " + (phone || "") +
+          "%0AVehicle: " + (vehicle || "") +
+          "%0ALooking to: " + service;
+
+        if (details) {
+          smsBody += "%0ADetails: " + encodeURIComponent(details);
+        }
+
+        smsBody += "%0A%0ALooking forward to the best deal!";
+
+        const smsLink = "sms:+17144718775?&body=" + smsBody;
+        smsButton.href = smsLink;
+
+        confirmationBox.style.display = "block";
+        confirmationBox.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     }
   </script>
