@@ -996,7 +996,7 @@
 
         previewText.textContent = preview;
 
-        // Build SMS body (URL-encoded line breaks)
+        // Build SMS body (NO closing line)
         let smsBody =
           "Hi, I'm " + (name || "") +
           "%0AHere is my info:" +
@@ -1007,8 +1007,6 @@
         if (details) {
           smsBody += "%0ADetails: " + encodeURIComponent(details);
         }
-
-        smsBody += "%0A%0ALooking forward to the best deal!";
 
         const smsLink = "sms:+17144718775?&body=" + smsBody;
         smsButton.href = smsLink;
